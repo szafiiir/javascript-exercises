@@ -1,14 +1,29 @@
-const sumAll = function(a, b) {
+const sumAll = function (a, b) {
 
-    if (a < 0 || b < 0 || !Number.isInteger(a) || !Number.isInteger(b) || typeof a !== 'number' || typeof b !== 'number') {
-        return 'ERROR';
+  if (
+    a < 0 ||
+    b < 0 ||
+    !Number.isInteger(a) ||
+    !Number.isInteger(b) ||
+    typeof a !== "number" ||
+    typeof b !== "number"
+  ) {
+    return "ERROR";
+  } else if (a <= b) {
+
+    let sum = 0;
+    for (let i = a; i <= b; i++) {
+        sum += i;
     }
-    else if (a <= b) {
-        
+    return sum;
+  } else if (a > b) {
 
+    let sum = 0;
+    for (let i = b; i <= a; i++) {
+        sum += i;
     }
-
-
+    return sum;
+  }
 };
 
 // Do not edit below this line
