@@ -12,7 +12,6 @@ const palindromes = function (text) {
         return false;
     }
 
-
 };
 
 // Do not edit below this line
